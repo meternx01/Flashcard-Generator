@@ -2,9 +2,9 @@ var ClozeCard = function (argText, argCloze) {
 	if (argText == "" || argCloze == "") {
 		return console.log("Invalid Arguments");
 	}
-	if (!(this instanceof ClozeCard){
-        return new BasicCard(argText, argCloze)
-    }
+	if (!(this instanceof ClozeCard)){
+		return new ClozeCard(argText, argCloze)
+	}
 	if (argText.toUpperCase().includes(argCloze.toUpperCase())) {
 		this.fullText = argText;
 		this.cloze = argCloze;
